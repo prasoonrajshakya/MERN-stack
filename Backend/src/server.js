@@ -12,7 +12,8 @@ const PORT = process.env.PORT || 5001
 
 connectDB() //connect to the database
 
-app.use("/api/notes",notesRoutes) //middleware to use the routes defined in notesRoutes.js, all routes will be prefixed with /api/notes
+app.use(express.json())                             //middleware to parse JSON request bodies, this allows us to access req.body in our route handlers
+app.use("/api/notes",notesRoutes)                   //middleware to use the routes defined in notesRoutes.js, all routes will be prefixed with /api/notes
 
 
 app.listen(PORT,()=>{
