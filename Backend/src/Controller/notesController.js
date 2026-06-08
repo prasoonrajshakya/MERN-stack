@@ -6,7 +6,7 @@ import Note from "../models/Note.js";
 export async function getNotes(req, res) {
   try {
     const notes = await Note.find(); //fetch all notes from the database using the Note model, this returns a promise so we use await
-    res.status(200).json(notes); //send the notes as a JSON response with a 200 status code
+    res.status(200).json({ notes }); //send the notes as a JSON response with a 200 status code
   } catch (error) {
     res
       .status(500)
