@@ -3,6 +3,7 @@ import notesRoutes from "./routes/notesRoutes.js";
 import { connectDB } from "./config/db.js"; //{} required because connectDB is a named export in db.js, if it were a default export we would import it without {}
 import dotenv from "dotenv";
 import rateLimiter from "./middleware/rateLimiter.js";
+
 dotenv.config(); //load environment variables from .env file
 console.log(process.env.MONGO_URL); //test to check if the environment variable is being read correctly, should print the MongoDB connection string from .env file
 
@@ -10,9 +11,10 @@ console.log(process.env.MONGO_URL); //test to check if the environment variable 
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-app.use(express.json()); //middleware to parse JSON request bodies, this allows us to access req.body in our route handlers
-app.use(rateLimiter); //middleware to apply rate limiting to all routes, this will limit the number of requests a client can make in a given time period, preventing abuse and ensuring fair usage of the API
-//simple coded middleware
+app.use(express.json());            //middleware to parse JSON request bodies, this allows us to access req.body in our route handlers
+app.use(rateLimiter);               //middleware to apply rate limiting to all routes, this will limit the number of requests a client can make in a given time period, preventing abuse and ensuring fair usage of the API
+
+//simple coded custom middleware
 // app.use((req, res, next) => {
 //   console.log("new request gotten");
 //   next(); //
