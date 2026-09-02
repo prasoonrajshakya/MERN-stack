@@ -1,0 +1,22 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "A notes app built to learn the MERN stack end to end. The live app is called **ThinkBoard** — create, read, update, and delete notes through a themed React UI backed by an Express + MongoDB API with Upstash-powered rate limiting.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prasoonrajshakya/MERN-stack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/prasoonrajshakya/MERN-stack/issues"
+  },
+  "homepage": "https://github.com/prasoonrajshakya/MERN-stack#readme"
+}
