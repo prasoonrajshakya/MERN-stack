@@ -1,5 +1,3 @@
-import React from "react";
-
 const RateLimited = () => {
   return (
     <div className="mx-auto max-w-6xl p-4">

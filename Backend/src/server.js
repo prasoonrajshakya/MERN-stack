@@ -7,7 +7,7 @@ import { connectDB } from "./config/db.js"; //{} required because connectDB is a
 import rateLimiter from "./middleware/rateLimiter.js";
 
 dotenv.config(); //load environment variables from .env file
-console.log(process.env.MONGO_URL); //test to check if the environment variable is being read correctly, should print the MongoDB connection string from .env file
+//console.log(process.env.MONGO_URL); //test to check if the environment variable is being read correctly, should print the MongoDB connection string from .env file
 
 // const express = require("express")
 const app = express();
